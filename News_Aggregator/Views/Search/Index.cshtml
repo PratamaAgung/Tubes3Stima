@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{ 
+    ViewBag.Title = "Search";
+}
+
+<div class="container">
+    <h3>Enter keyword</h3>
+    <div class="row">
+        <form action="/Search/SearchResult" method="post">
+            <div class="input-group col-md-4">
+                <span class="input-group-addon" ><i class="glyphicon glyphicon-search"></i></span>
+                <input id="key" type="text" class="form-control" name="key" placeholder="Search Keyword">
+            </div>
+            <select class="form-control col-md-4" id="mode" name="mode">
+                <option>KMP Search</option>
+                <option>Boyer-Moore</option>
+                <option>Regex</option>
+            </select>
+            <button class="btn btn-primary col-md-2" style="margin-left:40px;" type="submit">Search</button>
+        </form>
+    </div>
+</div>
+
+
