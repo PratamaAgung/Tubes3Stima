@@ -2,15 +2,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<p>
-    @for (int i = 0; i < ViewBag.Content.Count; i++)
+    @if (ViewBag.Content != null)
     {
-        <ul>
-            <li>
+        for (int i = 0; i < ViewBag.Content.Count; i++)
+        {
+            <div class="container" style="background-color: lightgray; margin: 5px; padding: 15px;">
                 @ViewBag.Content[i].Title <br />
                 @ViewBag.Content[i].Description <br />
-                @ViewBag.Content[i].Url <br />
-            </li>
-        </ul>
+                <a href="@ViewBag.Content[i].Url.Substring(5)"> @ViewBag.Content[i].Url</a> <br />
+            </div>
+        }
     }
-</p>

@@ -184,11 +184,11 @@ namespace News_Aggregator.Controllers
             if(i >= 0)
             {
                 int start = i + 1;
-                return input.Substring(start).Replace('\n', ' ');
+                return input.Substring(start).Replace("\n   ", "");
             }
             else
             {
-                return input.Replace('\n', ' ');
+                return input.Replace("\n   ", "");
             }
         }
 
